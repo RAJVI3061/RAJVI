@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>string:<br>hi ,how are you, hope you had a nice day, byee.</p>
+    <script>
+       function Char_Counts(str1) {
+var uchars = {};
+str1.replace(/\S/g, function(l){uchars[l] = (isNaN(uchars[l]) ? 1 : uchars[l] + 1);});
+return uchars;
+}
+console.log(Char_Counts("hi ,how are you, hope you had a nice day, byee."));
+
+function find_FirstNotRepeatedChar(str) {
+  var arra1 = str.split('');
+  var result = '';
+  var ctr = 0;
+ 
+  for (var x = 0; x < arra1.length; x++) {
+    ctr = 0;
+ 
+    for (var y = 0; y < arra1.length; y++) 
+    {
+      if (arra1[x] === arra1[y]) {
+        ctr+= 1;
+      }
+    }
+ 
+    if (ctr < 2) {
+      result = arra1[x];
+      break;
+    }
+  }
+  return result;
+}
+console.log("first non repeated char in this string:")
+console.log(find_FirstNotRepeatedChar('hi ,how are you, hope you had a nice day, byee.'));
+
+
+    </script>
+</body>
+</html>

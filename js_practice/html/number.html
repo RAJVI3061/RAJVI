@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number</title>
+    <style>
+        .hide{
+            display: none;
+        }
+        .NUMBER:hover + .hide {
+            display : block;
+            color: red;
+        }
+    </style>
+     <script>
+        function numberfunction() {
+          var pNo, firstDigit, allDigits, numValidate, numResult, rangeResult;
+          pNo = String(document.getElementById("num").value);
+          firstDigit = pNo.charAt("0");
+          numValidate = /[6-9]/g;
+          numResult = numValidate.test(firstDigit);
+          allDigits = /[0-9]/g;
+          rangeResult = allDigits.test(Number(pNo));
+          if (rangeResult == false) {
+            alert("Enter valid number");
+          }
+  
+          if (numResult == false) {
+            alert("Number should start with 6,7,8,9");
+          }
+          if (pNo.length == 10) {
+            return true;
+          } else {
+            alert("Number digits should be 10");
+          }
+        }
+      </script>
+    
+</head>
+<body>
+    <div class="NUMBER">
+        <label for="num">Phone Number:</label>
+        <input type="text" name="num" id="num" placeholder="Phone Number" required>
+         </div>
+       <div class="hide">Number should start with 6,7,8,9 with ten digits  </div>
+       <br /><br />
+       <input type="submit" onclick="numberfunction()" />
+</body>
+</html>

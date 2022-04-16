@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- <a href="List_Form.html"> Add New </a> -->
+    <form id="form" border="100px" action="LIst_DAta.html">
+        <fieldset>
+            <center>
+            
+             <label for="fname">First Name:</label>
+                <input type="text" name="fname" id="fname" placeholder="First name" required
+                 pattern="[a-zA-Z].{2,}" title="Must be alphbets only,minimum 3 required.">
+                <br><br>
+             <label for="lname">Last Name:</label>
+                <input type="text" name="lname" id="lname" placeholder="Last name" required
+                 pattern="[a-zA-Z].{2,}" title="Must be alphbets only,minimum 3 required.">                
+                <br><br>
+            <div class="NUMBER">
+                    <label for="num">Phone Number:</label>
+                    <input type="text"  id="phonenumber" placeholder="Phone Number"
+                     pattern="[0-9]{10,10}" 
+                      title="first digits must start from 9,8,7,6 only,exactly 10 digits required ">
+                    <br /><br />
+                   
+             E-mail: <input type="email" id="email" name="email" 
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" 
+                title="Email format must be ___@___.__" required>
+                <br><br><br>
+                
+                <input type="submit" onclick="add(), event.preventDefault()">
+                <input type="reset">
+         
+            </center>
+        </fieldset>
+    </form>
+    <table id="Table"  border="20px" style="border-color: rgb(81, 202, 70);">
+        
+        <tr>
+            <td>Sr.No</td>
+            <td>Name</td>
+            <td>Number</td>
+            <td>Email</td>
+            <td>Delete</td>
+        </tr>
+    </table>
+    <script>
+    var arra = new Array();
+function add() {
+  get();
+  arra.push({
+    fname: document.getElementById("fname").value,
+    lname: document.getElementById("lname").value,
+    phonenumber: document.getElementById("phonenumber").value,
+    email: document.getElementById("email").value,
+  });
+  localStorage.setItem("Data", JSON.stringify(arra));
+  show();
+}
+function get() {
+  var str = localStorage.getItem("Data");
+  if (str != null) arra = JSON.parse(str);
+}
+
+
+function show() {
+  get();
+  var tbl = document.getElementById("Table");
+  var x=tbl.rows.length;
+  while(--x){
+      tbl.deleteRow(x);
+      
+  }
+  
+  for (i = 0; i < arra.length; i++) {
+    var r = tbl.insertRow();
+    var cell=r.insertCell();
+    var cell1 = r.insertCell();
+    var cell2 = r.insertCell();
+    var cell3 = r.insertCell();
+    var cell4 = document.createElement("input");
+    cell4.type= "button";
+    r.insertCell().appendChild(cell4);
+    cell4.setAttribute("value","delete");
+    //cell4.onclick =del();
+    cell.innerHTML  = i+1;
+     cell1.innerHTML = arra[i].fname.concat(" "+arra[i].lname);
+    cell2.innerHTML = arra[i].phonenumber;
+    cell3.innerHTML = arra[i].email;
+  }
+  function del(){
+   // deleteRow(this);
+   // tbl.row($(this).parents('tr')).remove().draw(false);
+   
+}
+}
+</script>
+</body>
+</html>

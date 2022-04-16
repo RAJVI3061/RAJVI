@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data</title>
+  <link rel="stylesheet" href="display.css"></link>  
+</head>
+<body bgcolor="pink">
+   <div id="div1"> <b><h2 align="left" id="greeting"></h2></b>
+    
+   <b> <h1 align="center"> WELCOME </h1></b>
+    <i><h1 align="center" id="result1"></h1></i>
+</div>
+    <hr>
+   <i><u> <h3 align="right">Time:<span id="time"></span></h3></u></i>
+    
+    &nbsp;&nbsp;&nbsp;<button type="button" class="button button1" onclick="calling()">Phone</button>&nbsp;&nbsp;&nbsp;<button
+     type="button" class="button button2"
+    onclick="mailing()" >Email </button>
+    
+    
+   <script>
+       document.getElementById("result1").innerHTML=JSON.parse(localStorage.getItem("data")).Name;
+       function calling(){
+           location.href="tel:" + JSON.parse(localStorage.getItem("data")).No;
+       }
+     function  mailing(){
+        location.href="mailto:" + JSON.parse(localStorage.getItem("data")).Email;
+        }
+       
+       function refreshtime(){
+         const timedisplay=document.getElementById("time");
+         const datestring= new Date().toLocaleTimeString();
+         //const formattedstring=datestring.replace(",","-");
+         timedisplay.textContent = datestring;
+          }
+           setInterval(refreshtime, 1000);
+           
+           const time= new Date().getHours();
+        let greet;
+        if (time <12)
+        {
+            greet= "Good Morning";
+        }
+        else if (time <17)
+        {
+           greet= "Good Afternoon"
+        }
+       else if (time <22)
+        {
+            greet= "Good Evening";
+        }
+        else 
+        {
+            greet= "Good Night";
+        }
+        document.getElementById("greeting").innerHTML=greet;
+    
+        
+      // var current_time=new Date().toLocaleTimeString();
+       //console.log(current_time);
+       //document.getElementById("time").textContent=current_time;
+    
+        //document.getElementById("result2").innerHTML=localStorage.getItem("No");
+        //document.getElementById("result3").innerHTML=localStorage.getItem("Mail");
+    </script>
+</body>
+</html>

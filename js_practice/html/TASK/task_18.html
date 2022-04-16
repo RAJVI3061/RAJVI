@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>email validation</title>
+    <link rel="stylesheet" url="task18.css">
+</head>
+<body>
+    <form>
+        <div>
+            <span>Username:</span><br>
+            <input type="text" id="user" 
+            pattern="[a-zA-Z]{2,0}" required>
+            </div><br><br>
+        <div><span>Eamil:</span><br>
+            <input type="email" id="user"
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required >
+            </div><br><br>
+        <div> <span>Password:</span><br>
+            <input type="password" id="user" 
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[%+-@#$&*])(?=.*[A-Z]).{8,16}" required>
+            </div><br><br>
+        <div><span>Confirm Password:</span><br>
+            <input type="password" id="user"
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[%+-@#$&*])(?=.*[A-Z]).{8,16}" required  >
+        </div><br><br>
+        <input type="submit">
+    </form>
+    <script>
+        
+    </script>
+</body>
+</html>

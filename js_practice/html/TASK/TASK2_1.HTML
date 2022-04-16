@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tAsK:2-1</title>
+    <link rel="stylesheet" href="task2-1.css">
+</head>
+<body>
+    <center>
+   <form>
+        <form id="form" border="100px" >
+        
+             <fieldset >
+            
+            
+                <input type="text" class="form_data" name="fname" id="fname"  required
+                       pattern="[a-zA-Z].{2,}" title="Must be alphbets only,minimum 3 required.">
+                      
+                      <div for="fname">First Name</div><br><br>
+            
+                <input type="text" name="lname" id="lname" class="form_data" required
+                      pattern="[a-zA-Z].{2,}" title="Must be alphbets only,minimum 3 required.">                
+                     <div for="lname">Last Name</div><br><br>
+            
+            
+                <input type="text"  id="phonenumber" class="form_data" required
+                       pattern="[0-9]{10,10}" 
+                       title="Exactly 10 digits required ">
+                     <div for="num">Phone Number</div><br /><br>
+                    
+                <input type="text"  id="age" class="form_data" required
+                       pattern="[0-9]+[1-9]{0,2}" 
+                       title="Can enter positive number only ">
+                      <div for="age">Age</div><br /><br>
+              
+                <input type="email" id="email" name="email" class="form_data" required
+                      pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" 
+                      title="Email format must be ___@___.__" required>
+                      <div for="Email">Email</div> <br><br>
+                   
+            
+                      
+            <textarea required rows="3"></textarea>
+                      <div for="address">Address</div> <br><br>
+
+                      <div align:"left"><label for="gender" >Gender:</label>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      <input  type="radio" value="Male" id="gender" name="gender" checked >Male
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      <input   type="radio" value="Female" id="gender" name="gender">Female
+             </div><br><br>
+
+            <button  type="submit">SUBMIT 
+               <button type="reset">RESET
+            </fieldset>
+        
+        
+   </form> 
+</center>
+</body>
+</html>

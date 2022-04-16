@@ -1,0 +1,62 @@
+.panel>.table-responsive {
+    margin-bottom: 2;
+    border: 2;
+}
+
+.table-responsive {
+    min-height: .01%;
+    overflow-x: auto;
+}
+* {
+    border-radius: 3;
+    
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+user agent stylesheet
+div {
+    display: block;
+}
+body {
+    font-family: 'Raleway';
+    font-size: 13px;
+    font-weight: 400;
+    min-height: 100%;
+}
+body {
+    color: #333;
+    font-size: 13px;
+    line-height: 1.6;
+}
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: rgb(237, 207, 207);
+}
+html {
+    font-size: 10px;
+    -webkit-tap-highlight-color: rgba(39, 152, 64, 0);
+}
+html {
+    font-family: sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+table {
+    border: 5px;
+}
+:after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+:after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}

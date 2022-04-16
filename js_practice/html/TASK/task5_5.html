@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function char_count(str, letter) 
+{
+ var letter_Count = 0;
+ for (var position = 0; position < str.length; position++) 
+ {
+    if (str.charAt(position) == letter) 
+      {
+      letter_Count += 1;
+      }
+  }
+  return letter_Count;
+}
+console.log('hi ,how are you, hope you had a nice day hailey, thanks hi .')
+console.log('No of h in above :')
+console.log(char_count('hi ,how are you, hope you had a nice day hailey, thanks hi .', 'h'));
+
+    </script>
+</body>
+</html>

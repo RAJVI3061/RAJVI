@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task2_5</title>
+</head>
+<body>
+    <script>
+    //     const data = [['a', 1], ['b', 2]];
+    //     console.log("original:",data);
+    //     export const fromPairs = (array) => array.reduce((acc, value) => {
+    //  if (Array.isArray(value)) {
+    //    acc[value[0]] = value[1];
+    //   }
+    //   return acc;
+    // },
+    //  {});
+    //  console.log(data);
+    //     console.log(fromPairs(data));
+        
+        /**
+ * Task description: Write a method that returns an object composed of key-value pairs.
+ * Expected Result: [['a', 1], ['b', 2]] => { a: 1, b: 2 }
+ * Task Complexity: 2 of 5
+ * @param {Array} array - a deep array of pairs
+ * @returns {Array}
+ */
+ let data = [['a', 1], ['b', 2]];
+ console.log(data);
+ 
+ export const fromPairs = (array) => array.reduce((acc, value) => {
+  if (Array.isArray(value)) {
+    acc[value[0]] = value[1];
+  }
+  return acc;
+}, {});
+console.log(data);
+        console.log(fromPairs(data));
+    </script>
+</body>
+</html>

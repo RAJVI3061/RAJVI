@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var s1 = "Hi, How are you ? I am fine. What about you ? I am fine too.";
+        var a = s1.split("?");
+        var b = s1.slice(4,7);
+        var c = s1.substring(4,15);
+        var d = s1.charAt("1");
+        var e = s1.indexOf("you");
+        var f = s1.lastIndexOf("you");
+        var g = s1.indexOf("are");
+        var h = s1.search("are");
+        var i = s1.match("I");
+        console.log(a[0]);
+        console.log(a[1]);
+        console.log(a[2]);
+        console.log(a[0].length);
+        console.log(b);
+        console.log(c);
+        console.log(d);
+        console.log(e);
+        console.log(f);
+        console.log(g);
+        console.log(h);
+        console.log(i);
+        
+        console.log(s1.trim());
+
+    </script>
+</body>
+</html>

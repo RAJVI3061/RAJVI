@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task2_4</title>
+</head>
+<body>
+    <script>
+        let arra = [0, 1, false, 2, undefined, '', 3, null]
+        console.log(arra);
+        function filter_array(test_array) {
+    let index = -1;
+    const arr_length = test_array ? test_array.length : 0;
+    let resIndex = -1;
+    const result = [];
+
+    while (++index < arr_length) {
+        const value = test_array[index];
+
+        if (value) {
+            result[++resIndex] = value;
+        }
+    }
+
+    return result;
+}
+console.log(filter_array([0, 1, false, 2, undefined, '', 3, null]));
+
+    </script>
+</body>
+</html>

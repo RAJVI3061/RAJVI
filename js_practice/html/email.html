@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function myfunction() {
+          var Email,Pass,econdi,pcondi,eresult,presult ;
+          Email=String(document.getElementById("email").value);
+          Pass=String(document.getElementById("password").value);
+          econdi=/[a-z]{3,}/g;
+          pcondi=/[a-zA-Z0-9]{8,16}{$,#,&,@}/g;
+          eresult=fname.match(fcondi);
+          presult=lname.match(lcondi);
+          if(fname!=fresult){alert("Enter valid email")}
+          if(lname!=lresult){alert("Enter password according to instructions")}
+        }
+      </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<ij>, initial-scale=1.0">
+    <title>Email</title>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <center>
+            <label for="email">Email:</label>      
+             <input type="email" name="email" id="email" placeholder="Email" ><br><br>
+         <label for="password">password:</label>
+           <input type="password" name="password" id="password" title="Password should have min 8 letters,atleast one upper case,atleast one lower case,atleast one number and atleast one special charcter out of(@,#,$,&">
+         </center>
+         <input type="submit" onclick="myfunction()">
+        </fieldset>
+        </form>
+</body>
+</html>

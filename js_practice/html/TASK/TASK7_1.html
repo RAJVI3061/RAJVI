@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task7_1</title>
+  </head>
+  <body>
+    <h1 style="color: maroon;">Enter a string.</h1>
+    <input type="text" id="demo" />
+    
+    <input type="submit" onclick="no_repeat()">
+      
+   <br>
+    <h1 style="color: blue;">
+      First non repeated character in given string is: <span id="demo1"></span>
+    </h1>
+
+    <script>
+      function no_repeat(str) {
+        var str = document.getElementById("demo").value;
+        var strsplit = str.split("");
+        var result = "";
+        var count = 0;
+        for (var i = 0; i < strsplit.length; i++) {
+          count = 0;
+          for (var j = 0; j < strsplit.length; j++) {
+            if (strsplit[i] === strsplit[j]) {
+              count += 1;
+            }
+          }
+          if (count < 2) {
+            result = strsplit[i];
+            document.getElementById("demo1").innerHTML = result;
+            break;
+          }
+        }
+        return result;
+        document.getElementById("demo1").innerHTML = result;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const num = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
+  
+    
+        console.log(num);
+        function Odd(n) {
+          if (n % 2 != 0) {
+            return n;
+          }
+        }
+        const odd_arr = num.filter(Odd);
+        console.log(odd_arr);
+  
+
+  
+        function div_2_5(n) {
+          if (n % 2 == 0 || n % 5 == 0) {
+            return n;
+          }
+        }
+        const divisible_2_5 = num.filter(div_2_5);
+        console.log(divisible_2_5);
+
+        function div_3_sqr(n){
+            if(n % 3==0){
+            return n;
+               
+            }
+        }
+         
+          const div_3= num.filter(div_3_sqr);
+            console.log(div_3); 
+            function sqr(n)  {
+              return n*n;
+              
+          }
+          const sqr_ = div_3.map(sqr);
+              console.log(sqr_);
+              
+        function div_5_sqr(n){
+         if(n % 5==0){
+         return n;
+               
+         }
+      }
+         
+        const div_5= num.filter(div_5_sqr);
+       console.log(div_5); 
+      
+      
+       function sqr5(n)  {
+       return n*n;
+              
+     }
+          const sqr_5 = div_5.map(sqr5);
+              console.log(sqr_5);
+        function sum_5(n,m){
+           return n+m;
+        } 
+        const SUM_5=sqr_5.reduce(sum_5);
+        console.log(SUM_5);
+        </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .form {
+            border: 300px;
+        }
+    </style>
+    <script src="LISt_DAta.js"></script>
+</head>
+<body>
+    <form id="form" border="100px" action="LIst_DAta.html">
+        <fieldset>
+            <center>
+            
+             <label for="fname">First Name:</label>
+                <input type="text" name="fname" id="fname" placeholder="First name" required
+                 pattern="[a-zA-Z].{2,}" title="Must be alphbets only,minimum 3 required.">
+                <br><br>
+             <label for="lname">Last Name:</label>
+                <input type="text" name="lname" id="lname" placeholder="Last name" required
+                 pattern="[a-zA-Z].{2,}" title="Must be alphbets only,minimum 3 required.">                
+                <br><br>
+            <div class="NUMBER">
+                    <label for="num">Phone Number:</label>
+                    <input type="text"  id="phonenumber" placeholder="Phone Number"
+                     pattern="[0-9]{10,10}" 
+                      title="first digits must start from 9,8,7,6 only,exactly 10 digits required ">
+                    <br /><br />
+                   
+             E-mail: <input type="email" id="email" name="email" 
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" 
+                title="Email format must be ___@___.__" required>
+                <br><br><br>
+                
+                <input type="submit" onclick="add()" event.preventDefault()>
+         
+            </center>
+        </fieldset>
+    </form>
+    
+</body>
+</html>

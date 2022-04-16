@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="fname">
+    <input type="submit" onclick="add(), event.preventDefault()" >
+    <table id="Table">
+        <tr>
+            <td> Name</td>
+            <td> delete</td>
+        </tr>
+    </table >
+    <script>
+        var arra = new Array();
+    function add() {
+      get();
+      arra.push({
+        fname: document.getElementById("fname").value,
+        
+      });
+      localStorage.setItem("Data", JSON.stringify(arra));
+      show();
+    }
+    function get() {
+      var str = localStorage.getItem("Data");
+      if (str != null) arra = JSON.parse(str);
+    }
+    
+    
+    function show() {
+      get();
+      var tbl = document.getElementById("Table");
+      var x=tbl.rows.length;
+      while(--x){
+          tbl.deleteRow(x);
+          
+      }
+      
+      for (i = 0; i < arra.length; i++) {
+        var r = tbl.insertRow();
+        
+        var cell1 = r.insertCell();
+        
+        var cell4 = document.createElement("input");
+        cell4.type= "button";
+        r.insertCell().appendChild(cell4);
+        cell4.setAttribute("value","delete");
+        cell4.onclick = deleteRow(this);
+        
+         cell1.innerHTML = arra[i].fname;
+       
+      }
+    //   function del(){
+    //    deleteRow(this);
+    //     //tbl.row($(this).parents('tr')).remove().draw(false);
+    // }
+    }
+    </script>
+</body>
+</html>

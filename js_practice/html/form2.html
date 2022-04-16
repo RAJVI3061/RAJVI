@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+     <script>
+        function myfunction() {
+          var lname,fname,fcondi1,fcondi2,fcondi,lcondi,lcondi2,lcondi,fresult1,fresult2,fresult3,lresult1,lresult2,lresult3 ;
+          fname=String(document.getElementById("fname").value);
+          lname=String(document.getElementById("lname").value);
+          fcondi=fname.length;
+          lcondi=lname.length;
+          fcondi1=/[a-zA-Z]/g;
+          lcondi1=/[a-zA-Z]/g;
+          fcondi2=/[0-9]/g;
+          lcondi2=/[0-9]/g;
+         // fcondi3=/[0-9]{3,12}/g;
+          //lcondi3=/[0-9]/g;
+          
+          fresult1=fname.match(fcondi1);
+          lresult1=lname.match(lcondi1);
+          fresult2=fname.match(fcondi2);
+          lresult2=lname.match(lcondi2);
+          if(fcondi<3){
+              alert("Enter valid first name with min 3 letters")}
+        
+          if(lcondi<3){
+              alert("Enter valid last name with min 3 letters")
+        }
+        if(fname!=fresult1){
+              alert("Enter valid first name with alphabets")}
+        
+          if(lname!=lresult1){
+              alert("Enter valid last name with alphabets")
+        }
+        if(fname==fresult2){
+              alert("Enter valid first name without numbers")}
+        
+          if(lname==lresult2){
+              alert("Enter valid last name without numbers")}
+          }
+      </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    
+    
+</head>
+<body>
+    <form>
+        <fieldset>
+            <center>
+            
+                <label for="fname">First Name:</label>
+                <input type="text" name="fname" id="fname" placeholder="First name" required>
+                <br><br>
+                <label for="lname">Last Name:</label>
+                <input type="text" name="lname" id="lname" placeholder="Last name" required>
+                <br><br>
+                <input type="submit" onclick="myfunction()">
+         
+            </center>
+        </fieldset>
+    </form>
+</body>
+</html>

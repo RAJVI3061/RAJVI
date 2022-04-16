@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task3_3</title>
+</head>
+<body>
+   <form>
+                Password:
+           
+                <input type="password" id="txtPassword" />
+            <br><br>
+                Confirm Password:
+            
+                <input type="password" id="txtConfirmPassword" />
+            
+                <input type="button" id="btnSubmit" value="Submit" onclick=" Validate()" />
+    </form>      
+       <script >
+        function Validate() {
+            var password = document.getElementById("txtPassword").value;
+            var confirmPassword = document.getElementById("txtConfirmPassword").value;
+            if (password != confirmPassword) {
+                alert("Passwords do not match.");
+                return false;
+            }
+            return true;
+            }
+    </script>
+</body>
+</html>

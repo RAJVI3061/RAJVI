@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Data</title>
+    <script src="display.js"></script>
+    <!-- <script>
+        function fn()
+        {
+            var NAME=document.getElementById("fname").value;
+           
+            localStorage.setItem("Name",NAME);
+            var NUMBER=document.getElementById("phoneNumber").value;
+            var EMAIL=document.getElementById("email").value;
+            localStorage.setItem("No",NUMBER);
+            localStorage.setItem("Mail",EMAIL);
+            
+        }
+    </script> -->
+</head>
+<body>
+    <form action="display.html">
+        <fieldset>
+            <center>
+            
+                <label for="fname">First Name:</label>
+                <input type="text" name="fname" id="fname" placeholder="First name" required
+                 pattern="[a-zA-Z].{2,}" title="Must be alphbets only,minimum 3 required.">
+                <br><br>
+                <label for="lname">Last Name:</label>
+                <input type="text" name="lname" id="lname" placeholder="Last name" required
+                 pattern="[a-zA-Z].{2,}" title="Must be alphbets only,minimum 3 required.">                
+                <br><br>
+                <div class="NUMBER">
+                    <label for="num">Phone Number:</label>
+                    <input type="text"  id="phoneNumber" placeholder="Phone Number"
+                     pattern="[0-9]{10,10}" 
+                      title="first digits must start from 9,8,7,6 only,exactly 10 digits required ">
+                    <br /><br />
+                   
+                E-mail: <input type="email" id="email" name="email" 
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" 
+                title="Email format must be ___@___.__" required>
+                <br><br><br>
+                <label for="psw">Password</label>
+            <input type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[%+-@#$&*])(?=.*[A-Z]).{8,16}" 
+            title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" >
+               
+                <input type="submit" onclick="fn()">
+         
+            </center>
+        </fieldset>
+    </form>
+    
+</body>
+</html>

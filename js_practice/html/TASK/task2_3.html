@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task2_3</title>
+</head>
+<body>
+    <input type="number" id="input"><input type="submit" id="submit">
+    <h3 id="result"></h3>
+    <script>
+        (function() {
+    
+    var submit = document.getElementById('submit'),
+        input = document.getElementById('input'),
+        result = document.getElementById('result');
+        
+    
+    submit.addEventListener('click',function() { dashApp.init(input,result) });
+    input.addEventListener('focus', function() { this.value = "" });
+    
+    
+    var dashApp = {
+        
+        dashes: function(arr) {
+            var counter = arr.length,
+                temp = [];
+            for (var i = 0; i < counter; i++) {
+                temp.push(arr[i]);
+                if (arr[i] % 2 == 0 && arr[i+1] % 2 == 0) {
+                    temp.push('-');
+                }
+            }
+            return temp.join('');
+        },
+        
+        
+        init: function(input,output) {
+            var arr = input.value.split('');
+            output.innerHTML = dashApp.dashes(arr);
+        }
+    }
+})();
+    </script>
+</body>
+</html>
